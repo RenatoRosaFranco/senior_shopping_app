@@ -81,9 +81,10 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: senior_shopping_app_production
-    username: senior_shopping_app
-    password: <%= ENV["SENIOR_SHOPPING_APP_DATABASE_PASSWORD"] %>
+    # database: senior_shopping_app_production
+    # username: senior_shopping_app
+    # password: <%= ENV["SENIOR_SHOPPING_APP_DATABASE_PASSWORD"] %>
+    url: <%= ENV["SENIOR_SHOPPING_DATABASE_URL"] %>
   cache:
     <<: *primary_production
     database: senior_shopping_app_production_cache
