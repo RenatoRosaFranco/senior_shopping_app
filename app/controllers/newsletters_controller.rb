@@ -4,7 +4,7 @@ class NewslettersController < ApplicationController
   before_action :set_newsletter, only: [:destroy]
 
   def create
-    newsletter = Newsletter.find_or_initialize_by(params[:email])
+    newsletter = Newsletter.find_or_initialize_by(email: newsletter_params[:email])
 
     if newsletter.save && newsletter.signup!
       flash[:notice] = 'Você se inscreveu com sucesso.'
@@ -23,5 +23,11 @@ class NewslettersController < ApplicationController
     end
 
     redirect_to root_path
+  end
+
+  private
+
+  def newsletter_params
+    params.require(:newsletter).permit(:email)
   end
 end

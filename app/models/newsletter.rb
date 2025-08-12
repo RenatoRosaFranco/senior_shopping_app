@@ -9,10 +9,12 @@ class Newsletter < ApplicationRecord
   def signup!
     self.token = SecureRandom.hex(10)
     self.active = true
+    save!
   end
 
   def cancel!
     self.token = nil
     self.active = false
+    save!
   end
 end
