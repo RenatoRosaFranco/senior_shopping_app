@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec "/home/renatofranco/.nvm/versions/node/v22.3.0/bin/node" "/home/renatofranco/.yarn/bin/yarn.js" "$@"

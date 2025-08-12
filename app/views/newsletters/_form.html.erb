@@ -1,0 +1,18 @@
+<%= form_for(:newsletter, url: newsletters_path, method: :post, html: { class: "newsletter-form" }) do |f| %>
+  <div class="input-group input-group-lg pt-2">
+    <%= f.email_field :email,
+      class: "form-control",
+      required: true,
+      placeholder: "Seu melhor e-mail",
+      autocomplete: "email",
+      'aria-label': "E-mail para avisos" %>
+
+    <button type="submit" class="btn btn-primary">
+      Quero ser avisado(a)
+    </button>
+  </div>
+
+  <div class="form-text mt-3">Sem spam. Você pode sair 
+    <span class="fw-bold">quando quiser.</span>
+  </div>
+<% end %>

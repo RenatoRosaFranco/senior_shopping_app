@@ -1,0 +1,46 @@
+<% provide :title, 'Senior Shopping Brasil' %>
+
+<section id="hero" class="py-5">
+  <div class="container py-5">
+    <div class="row py-5">
+      <div class="col-md-6 offset-md-3 text-center">
+        <%= image_tag('logo.jpeg', class: 'brand-logo') %>
+        <h2 class="fw-bold text-center mb-2">Estamos chegando</h2>
+        <h5 class="fw-bold mt-2 mb-3">Lançamento 01/09</h5>
+        <p class='mb-4'>Nosso site entra no ar em 
+        <span class="fw-bold">1º de setembro</span>.<br> 
+        Seja o <span class="fw-bold">primeiro a saber.</span></p>
+
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div class="card">
+              <div class="card-body">
+                <%= render partial: 'newsletters/form',
+                  locals: { newsletter: @newsletter }
+                %>
+              </div>
+            </div>            
+          </div>
+        </div>
+
+        <ul class="list-unstyled list-inline mt-5 gap-3 social-links">
+          <li class="list-inline-item">
+            <%= link_to '#' do %>
+              <i class="fa-brands fa-facebook"></i>
+            <% end %>
+          </li>
+          <li class="list-inline-item">
+            <%= link_to 'http://instagram.com/seniorshopping_brasil' do %>
+              <i class="fa-brands fa-instagram"></i>
+            <% end %>
+          </li>
+          <li class="list-inline-item">
+            <%= link_to 'mailto:contato@seniorshop.com.br' do %>
+              <i class="fa-solid fa-envelope"></i>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
