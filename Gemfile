@@ -6,9 +6,6 @@ gem "rails", "~> 8.0.2"
 gem "propshaft"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
-gem "importmap-rails"
-gem "turbo-rails"
-gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "solid_cache"
@@ -17,8 +14,11 @@ gem "solid_cable"
 gem "bootsnap", require: false
 gem "kamal", require: false
 gem "thruster", require: false
-gem 'bootstrap'
-gem 'jquery'
+gem "sassc-rails"
+gem "devise"
+gem "bootstrap-sass", "~> 3.4.1"
+gem "sprockets-rails", "~> 3.4"
+gem "jquery-rails"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -32,6 +32,9 @@ group :development, :test do
   gem 'ffaker'
   gem 'faker'
   gem 'shoulda-matchers'
+  gem "guard"
+  gem "guard-livereload", require: false
+  gem "rack-livereload"
 end
 
 group :development do
@@ -42,5 +45,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "cssbundling-rails", "~> 1.4"
