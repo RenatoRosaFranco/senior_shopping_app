@@ -12,5 +12,34 @@
 
 .home {
   position: relative;
-  display: none;
+  background-color:  #f1e9d4;
+  font-size: 16px;
+
+  .brand-logo {
+    position: relative;
+    margin-top: -80px !important;
+    margin-bottom: 20px;
+    width: 180px;
+    height: 180px;
+  }
+
+  h2, h5 {
+    position: relative;
+    color: rgb(21, 59, 82) !important;
+  }
+
+  form {
+    button {
+      position: relative;
+      background-color: rgb(21, 59, 82) !important;
+    }
+  }
+
+  .social-links {
+    a {
+      border-radius: 25px;
+      border: 1px solid #EEE;
+      padding: 10px;
+    }
+  }
 }
