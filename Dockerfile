@@ -31,8 +31,7 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 RUN npm install --global yarn && \
-    yarn install --check-files
-
+    yarn install --frozen-lockfile || yarn install
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 FROM base
