@@ -329,10 +329,6 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.4.0)
-    propshaft (1.2.1)
-      actionpack (>= 7.0.0)
-      activesupport (>= 7.0.0)
-      rack
     pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -591,7 +587,6 @@ DEPENDENCIES
   jquery-rails
   kamal
   pg (~> 1.1)
-  propshaft
   puma (>= 5.0)
   rack-livereload
   rails (~> 8.0.2)

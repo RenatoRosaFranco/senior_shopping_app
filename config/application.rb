@@ -2,12 +2,17 @@ require_relative "boot"
 
 require "rails/all"
 
+require "sprockets/railtie"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module SeniorShoppingApp
   class Application < Rails::Application
+    config.assets.enabled = true
+    config.assets.version = "1.0"
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
